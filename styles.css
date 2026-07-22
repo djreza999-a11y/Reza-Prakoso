@@ -24,9 +24,9 @@ html {
 body {
   margin: 0;
   background:
-    radial-gradient(circle at top left, rgba(216, 162, 74, 0.26), transparent 28rem),
-    radial-gradient(circle at top right, rgba(15, 76, 129, 0.32), transparent 34rem),
-    linear-gradient(160deg, #07101d 0%, #0b1a2b 38%, #f3eadb 38%, #fffaf0 100%);
+    radial-gradient(circle at 12% 6%, rgba(216, 162, 74, 0.28), transparent 28rem),
+    radial-gradient(circle at 88% 8%, rgba(15, 76, 129, 0.34), transparent 32rem),
+    linear-gradient(180deg, #07101d 0%, #0b1a2b 760px, #f3eadb 761px, #fffaf0 100%);
   color: var(--ink);
 }
 
@@ -111,6 +111,11 @@ a {
   width: min(1120px, calc(100% - 2rem));
   margin: 0 auto;
   padding: 5.5rem 0;
+}
+
+main > .section:not(.hero) {
+  position: relative;
+  z-index: 1;
 }
 
 .hero {
@@ -276,12 +281,29 @@ dd {
 }
 
 .split-section > div:first-child h2 {
-  color: #f8fbff;
-  text-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
+  color: var(--ink);
+  text-shadow: none;
 }
 
 .split-section > div:first-child .eyebrow {
-  color: #f9c86b;
+  color: var(--accent);
+}
+
+#keahlian .section-heading,
+#proyek .section-heading,
+.contact-section > div:first-child,
+.split-section > div:first-child {
+  padding: 2rem;
+  border: 1px solid rgba(16, 24, 39, 0.12);
+  border-radius: 1.8rem;
+  background: rgba(255, 250, 240, 0.88);
+  box-shadow: var(--shadow);
+}
+
+#keahlian .section-heading h2,
+#proyek .section-heading h2,
+.contact-section h2 {
+  color: var(--ink);
 }
 
 .content-card {
