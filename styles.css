@@ -326,6 +326,196 @@ dd {
   gap: 1rem;
 }
 
+.skills-visual {
+  display: grid;
+  grid-template-columns: minmax(320px, 0.9fr) 1.1fr;
+  gap: 1rem;
+  align-items: stretch;
+  margin-bottom: 1rem;
+}
+
+.radar-card,
+.skills-note {
+  border: 1px solid rgba(16, 24, 39, 0.12);
+  border-radius: 1.6rem;
+  background: rgba(255, 250, 240, 0.9);
+  box-shadow: var(--shadow);
+}
+
+.radar-card {
+  display: grid;
+  min-height: 430px;
+  place-items: center;
+  padding: 1.4rem;
+}
+
+.radar-chart {
+  position: relative;
+  width: min(360px, 100%);
+  aspect-ratio: 1;
+}
+
+.radar-ring,
+.radar-axis,
+.radar-shape {
+  position: absolute;
+  inset: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.radar-ring {
+  border: 1px solid rgba(15, 76, 129, 0.16);
+  border-radius: 50%;
+}
+
+.ring-1 {
+  width: 28%;
+  height: 28%;
+}
+
+.ring-2 {
+  width: 46%;
+  height: 46%;
+}
+
+.ring-3 {
+  width: 64%;
+  height: 64%;
+}
+
+.ring-4 {
+  width: 82%;
+  height: 82%;
+}
+
+.radar-axis {
+  width: 1px;
+  height: 82%;
+  background: rgba(15, 76, 129, 0.14);
+  transform-origin: center;
+}
+
+.axis-1 {
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.axis-2 {
+  transform: translate(-50%, -50%) rotate(30deg);
+}
+
+.axis-3 {
+  transform: translate(-50%, -50%) rotate(60deg);
+}
+
+.axis-4 {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.radar-shape {
+  width: 68%;
+  height: 68%;
+  background: rgba(99, 178, 83, 0.24);
+  clip-path: polygon(50% 4%, 90% 26%, 83% 72%, 50% 94%, 16% 74%, 8% 28%);
+}
+
+.radar-shape::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #5fad4f;
+  clip-path: polygon(
+    50% 0,
+    53% 5%,
+    91% 27%,
+    88% 32%,
+    84% 73%,
+    78% 73%,
+    51% 95%,
+    47% 90%,
+    16% 75%,
+    18% 69%,
+    7% 29%,
+    13% 27%,
+    50% 0
+  );
+  opacity: 0.82;
+}
+
+.radar-label {
+  position: absolute;
+  max-width: 9rem;
+  color: var(--ink);
+  font-size: 0.78rem;
+  font-weight: 800;
+  line-height: 1.25;
+  text-align: center;
+}
+
+.label-top {
+  top: -0.3rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.label-right-top {
+  top: 24%;
+  right: -1rem;
+  text-align: left;
+}
+
+.label-right-bottom {
+  right: -1.15rem;
+  bottom: 25%;
+  text-align: left;
+}
+
+.label-bottom {
+  bottom: -0.3rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.label-left-bottom {
+  bottom: 25%;
+  left: -1rem;
+  text-align: right;
+}
+
+.label-left-top {
+  top: 24%;
+  left: -1.15rem;
+  text-align: right;
+}
+
+.skills-note {
+  padding: 1.6rem;
+}
+
+.skills-note h3 {
+  color: var(--primary);
+  font-size: 1.8rem;
+  letter-spacing: -0.04em;
+}
+
+.skills-note ul {
+  display: grid;
+  gap: 0.75rem;
+  margin: 1.2rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.skills-note li {
+  padding: 0.9rem 1rem;
+  border-radius: 1rem;
+  color: var(--ink);
+  background: rgba(15, 76, 129, 0.08);
+}
+
+.skills-note strong {
+  color: var(--primary);
+}
+
 .skill-grid article,
 .project-card {
   padding: 1.4rem;
@@ -536,6 +726,10 @@ dd {
     grid-template-columns: repeat(2, 1fr);
   }
 
+  .skills-visual {
+    grid-template-columns: 1fr;
+  }
+
   .stats-section {
     grid-template-columns: 1fr;
   }
@@ -556,6 +750,14 @@ dd {
 
   .skill-grid {
     grid-template-columns: 1fr;
+  }
+
+  .radar-card {
+    min-height: 360px;
+  }
+
+  .radar-label {
+    font-size: 0.68rem;
   }
 
   .site-footer {
