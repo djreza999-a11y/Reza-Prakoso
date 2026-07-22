@@ -14,6 +14,13 @@ Buka file `index.html` langsung di browser.
 - Sertifikasi atau tautan akademik tambahan
 - Tautan Google Scholar/SINTA/Scopus jika tersedia
 
+## Aset yang digunakan
+
+- `assets/reza-prakoso-profile.jpg` untuk foto profil
+- `assets/CV-Reza-Prakoso-Dwi-Julianto.pdf` untuk tombol download CV
+
+Jika website diunggah ke GitHub Pages, pastikan folder `assets` ikut disalin ke repository.
+
 ## Publikasi gratis
 
 Website ini bisa dipublikasikan gratis menggunakan GitHub Pages, Cloudflare Pages, atau Netlify.
